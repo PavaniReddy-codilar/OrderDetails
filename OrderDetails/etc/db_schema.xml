@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="codilar_orderdetails" resource="default" engine="innodb" comment="Codilar Order information is stored here">
+        <column xsi:type="smallint" name="entity_id" unsigned="false" nullable="false" identity="true"
+                comment="Entity ID"/>
+        <column xsi:type="smallint" name="order_id" unsigned="true" nullable="true" identity="false"
+                comment="Order ID"/>
+        <column xsi:type="varchar" name="product_id"  nullable="true" length="255"
+                comment="Product ID"/>
+        <column xsi:type="varchar" name="order_created_at" nullable="true" length="255"
+                comment="order Created Time"/>
+        <column xsi:type="varchar" name="order_total" nullable="true" length="255"
+                comment="order total"/>  
+        <column xsi:type="varchar" name="shipping_method" nullable="true" length="255"
+                comment="Shipping Method Name"/>
+        <column xsi:type="varchar" name="payment_method" nullable="true" length="255" 
+        comment="Payment Method"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>
